@@ -9,11 +9,19 @@ jobs:
             - name: checkout repo
               uses: actions/checkout@v4
 
-            - name: welcome message
-              run: echo "my first message"
+            - name: Multiline Command
+              run: | 
+                echo "my first message"
+                ls -ltr
+                cat README.md
+            
+            - name: create ASCII artwork
+              run: cosway -f cat "i am a cat" >> cat.txt
 
-            - name: list files
-              run: ls
 
-            - name: read file
-              run: cat README.md
+
+            # - name: list files
+            #   run: ls
+
+            # - name: read file
+            #   run: cat README.md
