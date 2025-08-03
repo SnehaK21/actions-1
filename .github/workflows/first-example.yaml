@@ -16,7 +16,7 @@ jobs:
                 cat README.md
             
             - name: create ASCII artwork
-              run: cosway -f cat "i am a cat" >> cat.txt
+              run: cowsay -f cat "i am a cat" >> cat.txt
 
 
 
