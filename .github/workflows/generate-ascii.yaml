@@ -1,0 +1,23 @@
+name: Generate ASCII Art
+
+on: push
+
+jobs:
+    generate_ascii_art:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
+
+            - name: Install 
+              run: sudo apt-install cosway
+
+            - name: create ASCII artwork
+              run: cosway -f cat "i am a cat" >> cat.txt
+
+            - name: list files
+              run: ls -ltra
+
+            - name: read file
+              run: cat cat.txt
+
