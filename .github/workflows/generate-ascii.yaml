@@ -10,7 +10,7 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Install 
-              run: sudo apt-install cosway
+              run: sudo apt-get install cosway
 
             - name: create ASCII artwork
               run: cosway -f cat "i am a cat" >> cat.txt
