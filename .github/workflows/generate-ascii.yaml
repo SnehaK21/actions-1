@@ -13,11 +13,11 @@ jobs:
               run: sudo apt-get install cowsay
 
             - name: create ASCII artwork
-              run: cowsay -f cat "i am a cat" >> cat.txt
+              run: cowsay -f dragon "i am a dragon" >> dragon.txt
 
             - name: list files
               run: ls -ltra
 
             - name: read file
-              run: cat cat.txt
+              run: cat dragon.txt
 
