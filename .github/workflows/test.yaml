@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Build Docker Image
         run: |
-          docker build -t ${{ env.CONTAINER_REGISTRY }}/${{ vars.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest .
+          docker build -t ${{ env.CONTAINER_REGISTRY }}/${{ vars.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
       - name: Log In to Registry
         run: |
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login ${{ env.CONTAINER_REGISTRY }} --username ${{ vars.DOCKER_USERNAME }} --password-stdin
